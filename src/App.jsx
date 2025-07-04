@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout/Index';
 import MoviesContext from './components/Constext/MoviesContext';
-import Home from './pages/home';
+import Home from './pages/Home';
 import CreateMovie from './pages/create';
 import NowPlaying from './pages/NowPlaying';
 import Popular from './pages/Popular';
