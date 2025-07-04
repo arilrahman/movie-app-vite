@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout/Index';
 import MoviesContext from './components/Constext/MoviesContext';
 import Home from './pages/Home';
-import CreateMovie from './pages/create';
+import CreateMovie from './pages/Create';
 import NowPlaying from './pages/NowPlaying';
 import Popular from './pages/Popular';
 import TopRated from './pages/TopRated';
