@@ -1,0 +1,67 @@
+import { useState } from 'react';
+import styles from './FormWeather.module.css';
+
+function FormWeather({ onAddWeather }) {
+  const [provinsi, setProvinsi] = useState('');
+  const [suhu, setSuhu] = useState('');
+  const [kelembaban, setKelembaban] = useState('');
+  const [cuaca, setCuaca] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (provinsi && suhu && kelembaban && cuaca) {
+      const newWeather = [
+        { status: 'Suhu Rata-rata', value: suhu, unit: '°C' },
+        { status: 'Kelembaban Rata-rata', value: kelembaban, unit: '%' },
+        { status: 'Tekanan Udara Rata-rata', value: cuaca, unit: 'hPa' },
+      ];
+      onAddWeather(provinsi, newWeather);
+
+      setProvinsi('');
+      setSuhu('');
+      setKelembaban('');
+      setCuaca('');
+    }
+  };
+
+  return (
+    <div className={styles.container}>
+      <h2 className={styles.title}>Form Cuaca</h2>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <input
+          type="text"
+          placeholder="Provinsi"
+          value={provinsi}
+          onChange={(e) => setProvinsi(e.target.value)}
+          className={styles.input}
+        />
+        <input
+          type="number"
+          placeholder="Suhu (°C)"
+          value={suhu}
+          onChange={(e) => setSuhu(e.target.value)}
+          className={styles.input}
+        />
+        <input
+          type="number"
+          placeholder="Kelembaban (%)"
+          value={kelembaban}
+          onChange={(e) => setKelembaban(e.target.value)}
+          className={styles.input}
+        />
+        <input
+          type="number"
+          placeholder="Tekanan Udara (hPa)"
+          value={cuaca}
+          onChange={(e) => setCuaca(e.target.value)}
+          className={styles.input}
+        />
+        <button type="submit" className={styles.button}>
+          Submit
+        </button>
+      </form>
+    </div>
+  );
+}
+
+export default FormWeather;

@@ -1,0 +1,98 @@
+/* Small Screen */
+.container {
+  background-color: #4361ee;
+  padding: 1rem;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__brand {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.navbar__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.navbar__item {
+  margin-bottom: 1rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; border-color: black;
+}
+
+.navbar__link{
+  text-decoration: none;
+  color: #fff;
+}
+/* Medium Screen */
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar__brand {
+    margin-bottom: 0;
+  }
+
+  .navbar__list {
+    flex-direction: row;
+  }
+
+  .navbar__item {
+    margin: 0 1rem;
+  }
+  .navbar__item a{
+    margin: 0 1rem;
+    color: white;  }
+}
+
+/* Large Screen */
+@media (min-width: 992px) {
+  /* 
+   * Nothing TODO HERE.
+   * We haven't styling Navbar.
+   */
+   /* Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  background-color: #4361ee;
+  width: 100vw; /* Lebar penuh */
+  padding: 1rem;
+  color: #fff;
+  margin: 0; /* Pastikan tidak ada margin */
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__brand {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.navbar__list {
+  display: flex;
+  flex-direction: row; /* Change column to row for horizontal layout */
+  list-style: none;
+  padding: 0; /* Optional: Clear default padding */
+}
+
+.navbar__item {
+  margin-right: 1rem; /* Space between items, adjust as needed */
+}
+}
